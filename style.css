@@ -1,0 +1,176 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+body {
+  background-color: #6A0DAD;
+  color: #00CC00;
+  font-family: Verdana;
+}
+
+h1 {
+  color: #00DD00;
+  background-color: #0a0a0a;
+  border: 2px solid #333333;
+  padding: 15px;c
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu {
+  background-color: #0a0a0a;
+  border: 2px solid #00DD00;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #00FF00;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  background-color: #1a1a1a;
+  border-left: 3px solid #C8102E;
+  font-family: 'Courier New', monospace;
+}
+
+.menu a:hover {
+  background-color: #6A0DAD;
+  color: #FFFFFF;
+  border-left: 3px solid #00FF00;
+}
+
+/* Botón hamburguesa - oculto por defecto en desktop */
+.menu-toggle {
+  display: none;
+  background-color: #0a0a0a;
+  color: #C8102E;
+  border: 2px solid #00DD00;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+} 
+
+.menu-toggle:hover {
+  background-color: #6A0DAD;
+  color: #00FF00;
+}
+
+.menu-toggle:active {
+  background-color: #0a0a0a;
+  color: #C8102E;
+  border: 2px solid #00DD00;
+}
+
+.menu-toggle:focus {
+  background-color: #0a0a0a;
+  color: #C8102E;
+  border: 2px solid #00DD00;
+  outline: none;
+}
+
+/* Estilos para móvil */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .menu {
+    display: none;
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Agregado - esto es lo importante */
+    margin-right: 0; /* También agregado para quitar el margen derecho */
+  }
+  
+  .menu.active {
+    display: block;
+  }
+  
+  .content {
+    margin-left: 0 !important;
+    padding: 10px;
+  }
+  
+  .content ul {
+    margin-left: 20px !important;
+  }
+  
+  p {
+    margin-left: 0 !important;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    float: none !important;
+    display: block;
+    margin: 0 auto 20px auto !important;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+.content {
+  margin-left: 235px;
+  overflow: auto;
+}
+
+h3 {
+  color: #00DD00;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.content ul {
+  color: #CCCCCC;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.content p {
+  color: #CCCCCC;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+a {
+  color: #00FF00; /* verde antes de clickear */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #00DD00; /* rojo después de clickear */
+}
+
+a:hover {
+  color: #C8102E; /* verde más claro al pasar el mouse */
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Mariela Rubin - Academic website with publications, CV, and teaching materials">
+<meta name="keywords" content="Mariela Rubin, publications, academic, research, logic, philosophy">
+<meta name="author" content="Mariela Rubin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Teaching - Mariela Rubin</title>
+    <link rel="icon" type="image/gif" href="/marubin.gif">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Teaching</h1>
+    
+    <button class="menu-toggle">☰ Menu</button>
+
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">Curriculum Vitae</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="clases.html">Recent Teaching</a></li>
+        <li><a href="kapital1.html">The bible and a Stove</a></li>
+      </ul>
+    </div>
+
+    
+      <h4>I've been teaching Logic 1 at the Philosophy Department of the University of Buenos Aires once a year since 2016.      </h4>
+
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('menu');
+      
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Mariela Rubin - Academic website with publications, CV, and teaching materials">
+<meta name="keywords" content="Mariela Rubin, publications, academic, research, logic, philosophy, vegan">
+<meta name="author" content="Mariela Rubin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen - Mariela Rubin</title>
+    <link rel="icon" type="image/gif" href="/marubin.gif">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      /* Estilos para el lightbox */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+      }
+      
+      .lightbox-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+      
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #00FF00;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      
+      .lightbox-close:hover {
+        color: #C8102E;
+      }
+      
+      /* Hacer las imágenes clickeables */
+      table img {
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+      
+      table img:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Kitchen</h1>
+    
+    <button class="menu-toggle">☰ Menu</button>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">Curriculum Vitae</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="clases.html">Recent Teaching</a></li>
+        <li><a href="kapital1.html">The Bible and a Stove</a></li>
+      </ul>
+    </div>
+    
+    <table align="center" border="1" cellpadding="10">
+      <tr>
+        <td><img src="/tortas/alfajor.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/alfajores.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/tortita.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/canion.jpg" width="180" class="gallery-img"></td>
+      </tr>
+      <tr>
+        <td><img src="/tortas/donas.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/lambda.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/mates.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/pan.jpg" width="180" class="gallery-img"></td>
+      </tr>
+      <tr>
+        <td><img src="/tortas/pandulce.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/pavlova.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/rogel.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/sanguc.jpg" width="180" class="gallery-img"></td>
+      </tr>
+      <tr>
+        <td><img src="/tortas/simpson.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/tarali.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/tortaaaj.jpg" width="180" class="gallery-img"></td>
+        <td><img src="/tortas/vainill.jpg" width="180" class="gallery-img"></td>
+      </tr>
+    </table>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <script>
+      // Script del menú
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('menu');
+      
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+      
+      // Script del lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+      const galleryImages = document.querySelectorAll('.gallery-img');
+      
+      // Agregar click a todas las imágenes
+      galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+          lightbox.style.display = 'block';
+          lightboxImg.src = this.src;
+        });
+      });
+      
+      // Cerrar el lightbox al hacer click en la X
+      closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+      });
+      
+      // Cerrar el lightbox al hacer click fuera de la imagen
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
+      
+      // Cerrar con la tecla ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          lightbox.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
