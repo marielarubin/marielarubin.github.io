@@ -119,13 +119,16 @@ h1 {
   }
   
   img {
-    max-width: 100%;
-    height: auto;
-    float: none !important;
-    display: block;
-    margin: 0 auto 20px auto !important;
-  }
-  
+  max-width: 100%;
+  height: auto;
+}
+
+.foto-texto img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 0 15px 0 !important;
+}  
   h1 {
     font-size: 1.5em;
     padding: 10px;
