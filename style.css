@@ -177,3 +177,13 @@ a:visited {
 a:hover {
   color: #C8102E; /* verde más claro al pasar el mouse */
 }
+
+a.oculto {
+  color: #6A0DAD;
+}
+a.oculto:visited {
+  color: #6A0DAD;
+}
+a.oculto:hover {
+  color: #6A0DAD;
+}
