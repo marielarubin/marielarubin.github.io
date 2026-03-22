@@ -178,6 +178,9 @@ a:hover {
   color: #C8102E; /* verde más claro al pasar el mouse */
 }
 
+.oculto {
+  color: #6A0DAD;
+}
 a.oculto {
   color: #6A0DAD;
 }
